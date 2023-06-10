@@ -1,10 +1,10 @@
 package com.example.lab4
 
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         inputPlainText = findViewById(R.id.plain_text);
         outputTextView = findViewById(R.id.text_view);
+        outputTextView.movementMethod = ScrollingMovementMethod()
     }
 
     fun read(view: View?) {
